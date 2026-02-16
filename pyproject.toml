@@ -3,12 +3,12 @@ requires = ["setuptools", "setuptools-scm", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "djangorestframework-api-key"
+name = "exc-djangorestframework-api-key"
 description = "API key permissions for the Django REST Framework"
 requires-python = ">=3.8"
 license = { text = "MIT" }
 authors = [
-  { name = "Florimond Manca", email = "florimond.manca@protonmail.com" },
+  { name = "Melih Sünbül", email = "m.sunbul@excellence-cloud.com" },
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -35,7 +35,7 @@ dependencies = [
 dynamic = ["version", "readme"]
 
 [project.urls]
-"Homepage" = "https://github.com/florimondmanca/djangorestframework-api-key"
+"Homepage" = "https://github.com/ExcellenceCloudGmbH/djangorestframework-api-key"
 "Documentation" = "https://florimondmanca.github.io/djangorestframework-api-key/"
 
 [tool.setuptools.dynamic]
