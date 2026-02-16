@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools-scm", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "exc-djangorestframework-api-key"
+name = "exc_djangorestframework_api_key"
 description = "API key permissions for the Django REST Framework"
 requires-python = ">=3.8"
 license = { text = "MIT" }
