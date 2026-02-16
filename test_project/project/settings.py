@@ -55,7 +55,12 @@ WSGI_APPLICATION = "project.wsgi.application"
 
 # Database
 
-DATABASES = {"default": dj_database_url.config(default="sqlite:///db.sqlite3")}
+DATABASES = {
+    "default": dj_database_url.config(default="sqlite:///db.sqlite3"),
+    "test": dj_database_url.config(
+        "TEST_DATABASE_URL", default="sqlite://test.sqlite3"
+    ),
+}
 
 
 # Password validation
@@ -67,6 +72,16 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
+]
+
+# Password hashers
+
+PASSWORD_HASHERS = [
+    "django.contrib.auth.hashers.PBKDF2PasswordHasher",
+    "django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher",
+    "django.contrib.auth.hashers.Argon2PasswordHasher",
+    "django.contrib.auth.hashers.BCryptSHA256PasswordHasher",
+    "django.contrib.auth.hashers.ScryptPasswordHasher",
 ]
 
 
