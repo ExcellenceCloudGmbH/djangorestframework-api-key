@@ -3,6 +3,7 @@ from django.contrib.admin import site
 from django.contrib.messages import get_messages
 from django.contrib.messages.middleware import MessageMiddleware
 from django.contrib.sessions.middleware import SessionMiddleware
+from django.http import HttpResponse
 from django.http.request import HttpRequest
 from django.test import RequestFactory
 from test_project.heroes.admin import HeroAPIKeyModelAdmin
@@ -17,8 +18,8 @@ def build_admin_request(rf: RequestFactory) -> HttpRequest:
 
     # NOTE: all middleware must be instantiated before
     # any middleware can process the request.
-    sessions = SessionMiddleware()
-    messages = MessageMiddleware()
+    sessions = SessionMiddleware(lambda request: HttpResponse())
+    messages = MessageMiddleware(lambda request: HttpResponse())
 
     sessions.process_request(request)
     messages.process_request(request)

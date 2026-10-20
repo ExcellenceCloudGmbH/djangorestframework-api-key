@@ -1,30 +1,30 @@
 -e .
 
 # Django environment.
-django[argon2,bcrypt]==3.2.*
-djangorestframework==3.12.*
-dj-database-url
-django-dotenv
+django[argon2,bcrypt]==5.2.18
+djangorestframework==3.18.3
+dj-database-url==3.1.2
+django-dotenv==1.4.2
 
 # PostgreSQL testing.
-psycopg2-binary
+psycopg2-binary==2.9.13
 
 # Packaging.
-twine
-wheel
+twine==7.0.0
+wheel==0.48.0
 
 # Tooling.
-autoflake
-black==21.11b1
-flake8
-flake8-bugbear
-flake8-comprehensions
-isort==5.*
-mkdocs==1.*
-mkdocs-material==8.*
-pymdown-extensions==9.*
-mypy
-pytest==6.*
-pytest-django==4.*
-pytest-cov
-seed-isort-config
+autoflake==2.4.0
+black==26.10.1
+flake8==7.4.1
+flake8-bugbear==26.9.30
+flake8-comprehensions==3.17.0
+isort==5.13.2
+mkdocs==1.6.1
+mkdocs-material==9.7.7
+pymdown-extensions==12.3
+mypy==2.4.0
+pytest==9.1.1
+pytest-django==4.14.0
+pytest-cov==7.1.0
+seed-isort-config==2.2.0
